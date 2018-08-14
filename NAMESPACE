@@ -1,0 +1,32 @@
+export(tau)
+export(cooks.distance,gleverage,hatvalues)
+export(dtouch,ptouch,rtouch,qtouch)
+export(toufit,score.delta)
+export(toureg,predict.toureg) 
+export(plot.toureg)
+export(rgram,touplot)  
+S3method(cooks.distance,toureg)
+S3method(gleverage,toureg)
+S3method(hatvalues,toureg)
+S3method(qnormal,toureg)
+S3method(predict,toureg)
+S3method(print,toureg)
+S3method(print,summary.toureg)
+S3method(print,toufit)
+S3method(plot,toureg)
+S3method(rgram,toureg)
+S3method(rgram,toufit)
+S3method(summary,toureg)
+S3method(toureg,formula)
+importFrom("stats", "coef", "optim", "fitted",
+             "formula", "model.frame", "model.matrix",
+             "model.response", "na.omit", "pchisq", "pnorm", "poisson",
+             "printCoefmat", "qnorm", "quantile", "xtabs")
+import(MASS,nleqslv,numDeriv,plotrix)
+importFrom("graphics", "abline", "axis", "lines", "mtext", "par",
+             "plot", "points", "rect")
+importFrom("stats", "cov", "delete.response", "dpois", "glm",
+             "glm.fit", "lm", "median", "predict", "qqnorm", "residuals",
+             "runif", "terms", "var", "weighted.mean")
+importFrom("utils", "data", "head", "tail")
+
