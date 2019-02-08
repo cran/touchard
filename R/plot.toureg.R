@@ -5,10 +5,12 @@ plot.toureg <- function (x, which = 1:4,  main = "",
                           "Leverage vs predicted values"), 
               sub.caption = paste(deparse(x$call), collapse = "\n"), 
               type = "Pearson", nsim = 50, level = 0.95, envelope = FALSE, ...) 
-{       
+{     
+	  if(x$method == "qp1" || x$method=="qp2") which <- 1  
+	  
 	  if (!is.numeric(which) || any(which < 1) || any(which > 4))  stop("_which_ must be in 1:4")
 	  #x <- object
-	  res <- residuals(x)   
+	  res <- residuals(x, "pearson")   
       
       n <- length(res)
       #k <- length(x$coefficients)
@@ -27,7 +29,7 @@ plot.toureg <- function (x, which = 1:4,  main = "",
       
   
       if(show[1]){
-          plot(predict(x, type = "invlink")$fit, res, xlab = "Linear predictor", 
+          plot(predict(x, type = "linpred")$fit, res, xlab = "Linear predictor", 
             ylab = paste(type, " residual"),  ...)
         mtext(caption[1], 3, 0.25, cex=.8)
         abline(h = 0, lty = 3, col = "gray")
@@ -50,7 +52,7 @@ plot.toureg <- function (x, which = 1:4,  main = "",
 	  }
       
       if(show[3]){
-		plot(1:n, cooks.distance(x), xlab = "Obs. number", 
+		plot(1:n, cooks.dist(x), xlab = "Obs. number", 
 		    ylab = "Cook's distance", 
             type = "h", ...)
         mtext(caption[3], 3, 0.25, cex=.8)  

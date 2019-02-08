@@ -6,7 +6,7 @@ rgram.toureg <- function (object, xlim = NULL, ylim = NULL, xlab = "Count", ylab
     mt <- terms(object)
     mf <- model.frame(object)
     y <- model.response(mf)
-    lhat <- object$fitted
+    lhat <- object$lambda
     dhat <- object$delta
     if (is.null(max)){
         max0 <- max(1.5 * max(y), 20L)

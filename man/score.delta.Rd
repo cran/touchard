@@ -5,7 +5,7 @@
 
 \description{
 	Score test for the extra (with respect to the Poisson) parameter in the Touchard 
-	model (Null: "delta = 0") performed without the need to fit
+	model (Null: \eqn{\delta} = 0) performed without the need to fit
 	the Touchard model. 	Analogous likelihood-ratio and Wald tests (which require fitting
 	the full model) are available in the output of \code{\link{toureg}}. 
 	}
@@ -16,9 +16,9 @@ score.delta(x, freq = NULL, max = 50, data)
 
 \arguments{
   \item{x}{
-	  for univariate data: either an object of class \code{table} with the observed counts as classifying factors \bold{or} the observed
-counts (raw data) \bold{or} the unique values of the observed counts in which case the observed
-frequencies must be given in argument \code{freq}; for regression data: an object of class "formula" with the symbolic description 
+	  for univariate data: either an object of class \code{table} with the observed counts as classifying factors \emph{or} the observed
+counts (raw data) \emph{or} the unique values of the observed counts in which case the observed
+frequencies must be given in argument \code{freq}; for regression data: an object of class \code{"formula"} with the symbolic description 
 of the model to be fitted.
 }
 \item{freq}{
@@ -44,8 +44,8 @@ of the model to be fitted.
 }
 
 \references{
-Andrade, BB; Matsushita, RY; Oliveira, SB (submitted) Analyzing Count Data with the Touchard Model in R. 
-\emph{J. of Statistical Software}.
+Andrade, BB; Matsushita, RY; Oliveira, SB (submitted) Analyzing Count Data with the Touchard Model. 
+\emph{available upon request}.
 }
 
 %\seealso{    \code{\link[vcd]{rootogram}},  \code{\link{touplot}}    } 

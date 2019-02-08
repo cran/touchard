@@ -9,13 +9,13 @@ toureg.default <- function(x, y, start.beta, start.delta, ...)
   }
 
   if( missing(start.delta) ){
-      d0 <- sign( mean(y) - var(y) )  # overdisp <=> delta < 0
+      d0 <- toufit(y)$fit$est['delta'] 
   }else{
       d0 <- start.delta
   }
-
-
-  fit <- toureg.fit(x=as.matrix(x), y=y, start.beta=b0, start.delta=d0)  
+  
+ 
+  fit <- toureg.fit(x=as.matrix(x), y=y, start.beta=b0, start.delta=d0, ...)  
   
   fit$call <- match.call()
   return(fit)  

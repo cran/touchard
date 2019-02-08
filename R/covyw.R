@@ -13,8 +13,8 @@ cov_yw <- function(lambda,delta,N=100){
     return(sum(B)/tau(lambda,delta,N))
     }
  EYW <- sapply(lambda, c0, delta=delta, N=N) 
- EY <- mu(lambda, delta)
- EW <- kapa(lambda, delta)
+ EY <- mu(lambda, delta, N=N)
+ EW <- kapa(lambda, delta, N=N)
  val <- EYW - EY*EW
  return(val)
 }  

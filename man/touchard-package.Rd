@@ -29,8 +29,8 @@ Matsushita RY, Pianto D, Andrade BB, Cancado A, Silva S (2018) The Touchard dist
 \emph{Communications in Statistics - Theory and Methods}, <doi:10.1080/03610926.2018.1444177>
 
 	
-Andrade, BB; Matsushita, RY; Oliveira, SB (submitted) Analyzing Count Data with the Touchard Model in R. 
-\emph{J. of Statistical Software}.
+Andrade, BB; Matsushita, RY; Oliveira, SB (submitted) Analyzing Count Data with the Touchard Model. 
+\emph{available upon request}.
 }
 
 

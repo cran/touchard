@@ -1,7 +1,7 @@
 
-hatvalues.toureg <- function(object, ...){
-  sig2 <- object$var
-  S <- diag(sig2)
+hvalues.toureg <- function(object, ...){
+  w <- object$var
+  W <- diag(w)
   k <- length(object$coefficients)
   V <- object$vcov[1:k,1:k]
   
@@ -12,6 +12,6 @@ hatvalues.toureg <- function(object, ...){
 		    object$x
 		}
     
-  h <- S %*% x %*% V %*% t(x) 
+  h <- W %*% x %*% V %*% t(x) 
   return(diag(h))
 }

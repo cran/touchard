@@ -1,5 +1,5 @@
 
-cooks.distance.toureg <- function(object, ...){
+cooks.dist.toureg <- function(object, ...){
 	h <- gleverage(object)   # former hatvalues
 	rp <- residuals(object)
 	k <- length(object$coefficients)

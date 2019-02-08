@@ -1,7 +1,8 @@
 tau0 <- function(lambda,delta,N=NULL,eps=sqrt(.Machine$double.eps)) {
   a <- lambda
   b <- delta
-  stopifnot(a >= 0)
+  if(a < 0) stop("tau cannot compute with negative lambda")
+  #stopstopifnot(a >= 0)
   
   if( is.null(N) ){
      A <- 1

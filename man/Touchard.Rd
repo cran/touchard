@@ -30,7 +30,7 @@ tau(lambda, delta, N=NULL, eps=sqrt(.Machine$double.eps))
 number of observations. 
 }
 \item{lambda}{
-	Poisson-like (location) parameter which corresponds to the mean of the distribution when 'delta' = 0  	
+	Poisson-like (location) parameter which corresponds to the mean of the distribution when \code{delta} = 0  	
 }
 \item{delta}{
 	shape/dispersion parameter which produces unequal dispersion (var x mean) when different from zero and
@@ -41,7 +41,7 @@ number of observations.
 	is used and iterated until the specified  relative error is reached.
 }
 
-\item{eps}{ relative error in the computation (series) of the normalizing constant. Only used if 'N=NULL'.
+\item{eps}{ relative error in the computation (series) of the normalizing constant. Only used if \code{N=NULL}.
 	See reference for details.  }
 
 \item{log}{
@@ -51,8 +51,8 @@ number of observations.
  
 
 \details{ 
-	The Touchard distribution with parameters \eqn{\lambda} (l) and \eqn{\delta} (d) has density
-	\deqn{f(x) = \frac{\lambda^x (x+1)^{\delta}}{x! \tau(\lambda,\delta)}}{[ l^x (x+1)^d ] / [ x! tau(l,d) ]}
+	The Touchard distribution with parameters \eqn{\lambda} and \eqn{\delta} has density
+	\deqn{f(x) = \frac{\lambda^x (x+1)^{\delta}}{x! \tau(\lambda,\delta)}}{[ lambda^x (x+1)^delta ] / [ x! tau(lambda,delta) ]}
 for \eqn{y=0,1,2,...}, \eqn{\lambda > 0 }  and \eqn{\delta} real. 	
 
 

@@ -1,0 +1,41 @@
+***************************************************
+**                 NEWS                          **
+**       News for Package \pkg{touchard}         **
+**  https://CRAN.R-project.org/package=touchard  **
+***************************************************
+
+
+
+Changes in version 2.0 (February 2019)
+
+o  Many changes motivated by submitted paper:
+   Andrade, BB; Matsushita, RY; Oliveira, SB (submitted) 
+   Analyzing Count Data with the Touchard Model. 
+   \emph{Annals of Applied Stats}.
+o  toureg() extensively modified: regression with log(mu) included; methods 'qp1', 'qp2' and 'glm' added.
+o  predict.toureg() and plot.toureg() modified and no longer compatible with previous version.
+o  hatvalues() and cooks.distance() replaced by hvalues() and cooks.dist().
+o  NEWS added.
+
+
+Changes in version 1.0 (August 2018)
+
+o  The 'touchard' package was first published on CRAN.
+o  rtouch() modified so that numerical arguments other than 'n' are recycled 
+   to the length of the result in accordance with other rng functions in R.
+o  toureg() added: regression with log(lambda) = linear predictor.    
+o  bug fixed in ptouch() when 'log=TRUE'. 
+o  tau() added (formerly invisible) allowing computation by truncation of series
+   and (added) by recursion (stopping at given relative error). 
+o  Datasets Accidents and Crabs added.
+
+
+Changes in versions 0.1.0, 0.1.1, 0.2.0 (2018)
+
+o  Package made available through author's website following publication of
+   Matsushita RY, Pianto D, Andrade BB, Cancado A, Silva S (2018) 
+   The Touchard distribution, 
+   \emph{Communications in Statistics - Theory and Methods}, 
+   <doi:10.1080/03610926.2018.1444177> .   
+o  Contains only basic functionality: dtouch(), ptouch(), qtouch() and rtouch() and dataset Epilepsy.
+ 

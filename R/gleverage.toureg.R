@@ -12,20 +12,37 @@ gleverage.toureg <- function(object, ...){
 		    object$x
 		}
     	
-  h <- hatvalues(object)
+  h <- hvalues(object)
   
-  lhat <- object$fitted.values
+  lhat <- object$lambda
   dhat <- object$delta
-  
-  c <- cov_yw(lhat, dhat)
-  d <- 1 / (1+y)
-  S <- diag(object$var)
-
-  A <- cbind(S%*%x, c)
-  B <- t(cbind(x,d))
+  gam <- cov_yw(lhat, dhat)
+  s2 <- object$var
    
-  invF <- object$vcov
+  if(object$regress == "lambda"){
+	   
+   d <- 1 / (1+y)
+   
+   S <- diag(s2)
+   A <- cbind(S%*%x, gam)
+   B <- t(cbind(x,d))
+   
+   invF <- object$vcov
   
-  glev <- diag( A %*% invF %*% B )
-  return(glev)
+   glev <- diag( A %*% invF %*% B )
+  
+  }else{  # regress == 'mu'
+   
+   d <-  1 / (1+y) - gam/s2
+   
+   D <- diag(object$mu)
+
+   A <- cbind(D%*%x, 0)
+   B <- rbind(crossprod(x, D/s2),t(d))
+   
+   invF <- object$vcov
+  
+   glev <- diag( A %*% invF %*% B )
+}
+   return(glev)
 }

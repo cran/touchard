@@ -12,8 +12,8 @@ toufit(x, freq = NULL, start, method = c("ml", "mm", "gmm"),
 \arguments{
 
 \item{x}{
-either an object of class \code{table} with the observed counts as classifying factors \bold{or} the observed
-counts (raw data) \bold{or} the unique values of the observed counts in which case the observed
+either an object of class \code{table} with the observed counts as classifying factors \emph{or} the observed
+counts (raw data) \emph{or} the unique values of the observed counts in which case the observed
 frequencies must be given in argument \code{freq}; see example below for the three formats.  
 }
 \item{freq}{
@@ -25,22 +25,22 @@ starting values to be used by optimization/nonlinear solving algorithms. If miss
 explained in the reference below.
 }
 \item{method}{
-one of 'ml' (maximum likelihood), 'mm' (method of moments based on the usual first and second moment conditions)
-or 'gmm' (generalized method of moments based on the first two moments and an extra condition on the first moment
-of log(Y+1). 
+one of \code{'ml'} (maximum likelihood), \code{'mm'} (method of moments based on the usual first and second moment conditions)
+or \code{'gmm'} (generalized method of moments based on the first two moments and an extra condition on the first moment
+of \emph{log(Y+1)}. 
 }
 \item{rc}{
-TRUE for right-censored data. Not implemented for methods 'mm' and 'gmm'.
+TRUE for right-censored data. Not implemented for methods \code{'mm'} and \code{'gmm'}.
 }
 
-\item{trunc.at.zero}{ TRUE for model truncated at zero. Not implemented for methods 'mm' and 'gmm'. }
+\item{trunc.at.zero}{ TRUE for model truncated at zero. Not implemented for methods \code{'mm'} and \code{'gmm'}. }
 
 
 }
  
 
-\details{ For method 'ml' the \code{\link{Touchard}} likelihood is numerically maximized via \code{optim()}
-	 with 'method=L-BFGS-B'. For methods 'mm' and 'gmm', the system of moment conditions
+\details{ For method \code{'ml'} the \code{\link{Touchard}} likelihood is numerically maximized via \code{optim()}
+	 with \code{'method=L-BFGS-B'}. For methods \code{'mm'} and \code{'gmm'}, the system of moment conditions
 	 is solved by calling  \code{nleqslv} and \code{numDeriv}. 
 }
 \value{
@@ -49,15 +49,15 @@ TRUE for right-censored data. Not implemented for methods 'mm' and 'gmm'.
 	\item{aic}{Akaike's information criterion, -2*log-likelihood + 2*p} 
 	\item{bic}{Schwarz's Bayesian criterion, -2*log-likelihood + log(n)*p}
 	\item{test}{a data frame with likelihood ratio and Wald test results for the Null: delta = 0 (Poisson)}
-	\item{method}{estimation method used ('ml', 'mm' or 'gmm')} 
+	\item{method}{estimation method used (\code{'ml'}, \code{'mm'} or \code{'gmm'})} 
 	\item{data}{a list with elements \code{x} and \code{freq}} 
 }
 \references{
 Matsushita RY, Pianto D, Andrade BB, Cancado A, Silva S (2018) The Touchard distribution, 
 \emph{Communications in Statistics - Theory and Methods}, <doi:10.1080/03610926.2018.1444177>
  
-Andrade, BB; Matsushita, RY; Oliveira, SB (submitted) Analyzing Count Data with the Touchard Model in R. 
-\emph{J. of Statistical Software}.
+Andrade, BB; Matsushita, RY; Oliveira, SB (submitted) Analyzing Count Data with the Touchard Model. 
+\emph{available upon request}.
 }
 \author{
 \packageAuthor{touchard}
