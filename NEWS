@@ -5,6 +5,10 @@
 ***************************************************
 
 
+Changes in version 2.0.1 (May 2019)
+
+o  Deviance residuals were incorrect up to v.2.0. Wrong sign used has been corrected. 
+
 
 Changes in version 2.0 (February 2019)
 

@@ -1,6 +1,6 @@
-91b2eea2c278c7cce27bfae55add0a8c *DESCRIPTION
+8c3be4080196fb0e0260702cf49df9e4 *DESCRIPTION
 827710ebfc637d8e587e8b7296c5c3a0 *NAMESPACE
-a9aa90d4e162b272c3dec2f04d4df0d1 *NEWS
+815aa0e0a717b5cfba21751e40b7eb4a *NEWS
 f1c269e89d30d1cae81ddcbc0ca3e313 *R/Lambda.R
 fb2561c37e5326fcac0d45a9684ec2cf *R/cooks.dist.R
 a9a7605b627ebdd52186c2bbb5a5b7ac *R/cooks.dist.toureg.R
@@ -24,7 +24,7 @@ f629fe02002b23712f0f7fbfffe338b0 *R/print.toureg.R
 b32377fa7359a7f07bb3adedd9dbc0f1 *R/ptouch.R
 fe658a5f0e4256ccfb17e4e06098d2ad *R/qnormal.toureg.R
 9c8b8ccded18cbc45f3878916c3c697e *R/qtouch.R
-e429c60d8b2a434d53a3fba070f16e3f *R/residuals.toureg.R
+702bc47a1b138b2ae4512276f4f14886 *R/residuals.toureg.R
 0a89ae03ffa90b6bb8fc14d7af8e7f3f *R/rgram.R
 cdb405f494a7a966e53525cb0a28dc09 *R/rgram.toufit.R
 d1ea9d8913efe0f242a44d0fd29c5280 *R/rgram.toureg.R
@@ -43,7 +43,7 @@ d533d8675a8e775a7612fa6db38460cc *R/toureg.R
 ab5a755134cd82458880203f1c3a91d7 *R/toureg.formula.R
 72a8827ad15b7c12c0f7753985df81f9 *R/varTou.R
 31ce6e89a21ed934df81df93fb5a5853 *R/weighted.var.R
-dff817c3c90697f1405c7f845e5a9061 *build/partial.rdb
+e8debdb47bf17b9846e4830d60a99b58 *build/partial.rdb
 f7c9111ee4278e8c6096a0f5163543f2 *data/Accidents.rda
 93277307f6a6e24380d83ccece48bfb7 *data/Crabs.rda
 0765fbec3aa477ab060efd7e41547722 *data/Epilepsy.rda

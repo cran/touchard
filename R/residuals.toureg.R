@@ -17,10 +17,10 @@ residuals.toureg <- function (object, type = c("deviance",  "pearson", "response
 		    object$y
 		}
      	   ltilde <- Lambda(MU=y, delta=object$delta, N=N, eps=eps)
-		   lhat <- object$lambda
-		   tau.tilde <- tau(lambda=ltilde, delta=object$delta, N=N, eps=eps)
-		   tau.hat <- tau(lambda=lhat, delta=object$delta, N=N, eps=eps)
-	       return( 2*sign(res)*(y*(log(ltilde) - log(lhat)) - log(tau.tilde) + log(tau.hat)) )
+           lhat <- object$lambda
+	   tau.tilde <- tau(lambda=ltilde, delta=object$delta, N=N, eps=eps)
+	   tau.hat <- tau(lambda=lhat, delta=object$delta, N=N, eps=eps)
+	       return( sign(res)*sqrt( 2*(y*(log(ltilde) - log(lhat)) - log(tau.tilde) + log(tau.hat)) ) )
      }
 }
   
